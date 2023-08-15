@@ -2,6 +2,7 @@ import RightHeader from '@/Components/RightHeader'
 import Headers from '../Components/Headers'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import TopMiddleHeader from '@/Components/TopMiddleHeader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,11 +14,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`flex`}>
+      <body className={`flex h-[150vh] w-full`}>
         <div>
           <Headers />
         </div>
-        {children}
+        <div className='flex flex-col bg-gray-100  flex-1 justify-start items-center'>
+          <TopMiddleHeader/>
+          {children}
+        </div>
         <div>
           <RightHeader />
         </div>

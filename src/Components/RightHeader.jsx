@@ -7,7 +7,7 @@ import { BellIcon as Bell } from '@heroicons/react/24/outline'
 const RightHeader = () => {
   return (
     <div className='Right_headers py-10 px-3'>
-        <div className="hamburgermenu md:hidden block absolute right-7 top-2 cursor-pointer hover:bg-gray-200 rounded-md p-[1px]">
+        <div className="hamburgermenu md:hidden block absolute right-[300px] top-2 cursor-pointer hover:bg-gray-200 rounded-md p-[1px]">
           <Bars3BottomLeftIcon className='h-6 text-gray-500'/>
         </div>
 
