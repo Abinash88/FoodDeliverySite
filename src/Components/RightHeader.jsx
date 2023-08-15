@@ -1,6 +1,7 @@
 import React from 'react'
 import { Bars3BottomLeftIcon, CakeIcon, Cog6ToothIcon, Cog8ToothIcon } from '@heroicons/react/24/solid'
 import { BellIcon as Bell } from '@heroicons/react/24/outline'
+import RightSidemore from '@/smallComponents.jsx/RightSidemore'
 
 
 const RightHeader = () => {
@@ -34,6 +35,8 @@ const RightHeader = () => {
           </div>
           <div className="bottom"></div>
         </div>
+
+        <RightSidemore/>
     </div>
   )
 }

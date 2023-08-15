@@ -1,33 +1,40 @@
+import Bakery from '../../public/bakery.png'
+import Burger from '../../public/burger.png'
+import Beverage from '../../public/beverage.png'
+import Chicken from '../../public/chicken.png'
+import Pizza from '../../public/pizza.png'
+import Seafood from '../../public/seafood.png'
+
 
 export const Catagory = [
     {
         key:'asdfae34rtqerwg',
-        image:'',
+        image:Bakery,
         name:'Bakery',
     },
     {
         key:'aerg43gwerdgfsdf',
-        image:'',
+        image:Burger,
         name:'Burger',
     },
     {
         key:'ehrterthertawer',
-        image:'',
+        image:Beverage,
         name:'Beverage',
     },
     {
         key:'weryw45hgser',
-        image:'',
+        image:Chicken,
         name:'Chicken',
     },
     {
         key:'qertgwy45gwergerwd',
-        image:'',
+        image:Pizza,
         name:'Pizza',
     },
     {
         key:'ewrtfwerfwqeswe3',
-        image:'',
+        image:Seafood,
         name:'SeaFood',
     },
 ] 
