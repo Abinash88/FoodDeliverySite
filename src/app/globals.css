@@ -1,13 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
 
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 *{
   margin: 0;
   font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+nav ul li {
+  width: 100%;
+}
+
+nav ul li .mainlink{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  justify-content: start;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+.mainlink .linkicon {
+  margin-right: 10px;
+}
+
+@media screen and (max-width:640px) {
+    nav ul li .linkname{
+      display: none;
+    }
+
+    .mainlink .linkicon {
+      margin-right: 0px;
+      font-size: 20px;
+    }
+    
 }
 
 .formclass input::placeholder{
@@ -50,8 +90,75 @@
   
 }
 
-.gomailSingleList{
-  width: 300px;
-  height: 300px;
-  background-color: white;
+
+/* main body more type styles  */
+
+
+  .moretype::-webkit-scrollbar{
+    width: 3px;
+    height: 5px;
+  }
+  
+  .moretype::-webkit-scrollbar-thumb{
+    background-color: rgb(156, 156, 156);
+    border-radius: 8px;
+  }
+  
+
+/* gomailbox styles start 44 */
+
+.gomailboxContainer{
+  width: 100%;
+  margin-top: 20px;
 }
+
+.GomealBox{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  place-items: center;
+  row-gap: 20px;
+}
+
+.GomealBox::-webkit-scrollbar{
+  width: 3px;
+  height: 5px;
+}
+
+.GomealBox::-webkit-scrollbar-thumb{
+  background-color: rgb(156, 156, 156);
+  border-radius: 8px;
+}
+
+.gomailSingleList{
+  width: 230px;
+  border-radius: 10px;
+  margin-right: 10px;
+  height: 230px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.topbox{
+  width: 90%; 
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottombox{
+  width: 90%;
+  margin: auto;
+  height: 30%;
+}
+
+.imagebox{
+  width: 120px;
+  height: 120px;
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+}
+

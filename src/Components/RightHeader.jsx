@@ -1,13 +1,12 @@
 import React from 'react'
-import '../Styles/RightHeaders.css'
 import { Bars3BottomLeftIcon, CakeIcon, Cog6ToothIcon, Cog8ToothIcon } from '@heroicons/react/24/solid'
 import { BellIcon as Bell } from '@heroicons/react/24/outline'
 
 
 const RightHeader = () => {
   return (
-    <div className='Right_headers py-10 px-3'>
-        <div className="hamburgermenu md:hidden block absolute right-[300px] top-2 cursor-pointer hover:bg-gray-200 rounded-md p-[1px]">
+    <div className='Right_headers xl:static absolute xl:w-[250px] py-10 px-3'>
+        <div className="hamburgermenu xl:hidden block absolute right-[200px] top-2 cursor-pointer hover:bg-gray-200 rounded-md p-[1px]">
           <Bars3BottomLeftIcon className='h-6 text-gray-500'/>
         </div>
 

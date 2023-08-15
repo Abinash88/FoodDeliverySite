@@ -36,7 +36,7 @@ export const MealBox = [
     {
         id:'34aewisdfhasdfwe',
         image:'',
-        discount:'15%',
+        discount:null,
         name:'Cheese Cake',
         price:5.59,
         liked:false,

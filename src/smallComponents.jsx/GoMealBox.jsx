@@ -3,11 +3,13 @@ import GoMailSingleItem from './GoMailSingleItem'
 
 const GoMealBox = ({MealBox}) => {
   return (
-    <div className="w-full">
-    <div className='w-[600px]  h-[300px] overflow-auto flex rounded-lg '>
-        {MealBox?.map((item) => {
+    <div className="gomailboxContainer">
+    <div className='GomealBox'>
+        {MealBox?.slice(0,3).map((item) => {
             return (<>
+            <div className="singlegomeal">
                 <GoMailSingleItem key={item.id} item={item}/>
+            </div>
             </>)
         })}
     </div>
