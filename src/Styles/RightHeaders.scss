@@ -1,0 +1,15 @@
+.Right_headers{
+    height: 100vh;
+    width: 300px;
+    background-color: white;
+}
+
+
+@media screen and (max-width:768px) {
+    .Right_headers{
+        height: 100vh;
+        width: 0px;
+        background-color: white;
+    }
+    
+}

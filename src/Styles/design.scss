@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:hover {
+    list-style-type: none;
+}
+
+
+.mainHeader {
+    height: 100vh;
+    width: 240px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .innerheader {
+        height: 90%;
+        width: 90%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        .logo_container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+
+            h2 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                line-height: 60px;
+                font-size: 28px;
+                cursor: pointer;
+
+                span{
+                    color: #f8b602;
+                }
+            }
+        }
+
+        .nav_Container {
+            width: 100%;
+
+            nav {
+
+                width: 100%;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    li {
+                        text-align: left;
+                        width: 80%;
+                        margin: 10px 0;
+
+
+                        a {
+                            width: 100%;
+                            border-radius: 10px;
+                            padding: 10px 20px 10px 20px;
+                            height: 100%;
+                            display: block;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            font-size: 14px;
+
+                            span{
+                                margin-left: 10px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .mainHeader{
+        width: 100px;
+    }
+
+    .linkname{
+        display: none;
+    }
+
+    nav ul li .mainlink .linkicon{
+        font-size: 20px;
+    }
+
+    nav ul li .mainlink{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHeader .innerheader .logo_container h2{
+        font-size: 20px !important;
+        font-weight: 800;
+    }
+}
+
+
+
+@media screen and (max-width:800px) {
+    .mainHeader{
+        width: 80px;
+    }
+
+
+    nav ul li .mainlink .linkicon{
+        font-size: 23px;
+    }
+
+  
+
+    .mainHeader .innerheader .logo_container h2{
+        font-size: 17px !important;
+        font-weight: 900;
+    }
+}
