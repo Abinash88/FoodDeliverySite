@@ -34,7 +34,7 @@ const TopMiddleHeader = () => {
 
           </div>
 
-          <form className='lg:w-[300px] w-auto formclass lg:rounded-lg rounded-full  h-[40px] bg-white flex items-center  px-2'>
+          <form className='lg:w-[300px] w-auto formclass lg:rounded-lg rounded-full sm:block hidden  h-[40px] bg-white flex items-center  px-2'>
             <MagnifyingGlassIcon className='h-6 text-yellow-500 mr-0 lg:mr-2' />
             <input type="search" placeholder='What do you want to eat today?' className='w-full h-full bg-transparent lg:block hidden rounded-lg' name="" />
           </form>

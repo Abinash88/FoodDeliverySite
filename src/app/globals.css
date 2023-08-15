@@ -93,6 +93,9 @@ nav ul li .mainlink{
 
 /* main body more type styles  */
 
+  .moretype{
+    height: 100vh  !important;
+  }
 
   .moretype::-webkit-scrollbar{
     width: 3px;
@@ -162,3 +165,47 @@ nav ul li .mainlink{
   border-radius: 10px;
 }
 
+.buttons{
+  margin-top: 10px;
+}
+
+.buttonborder{
+  border: 1px solid gray;
+  color: gray;
+  font-size: 12px;
+  padding:4px 10px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+
+
+/* order menu box style start  */
+.ordermenuimage{
+  width: 60px ;
+  height: 60px ;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.ordermenubox{
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+}
+
+.ordermenu .namebox p{
+  font-size: 11px;
+  color: gray;
+
+}
+
+.ordermenu .namebox h5{
+  font-size: 13px;
+  color: gray;
+
+}
+
+.pricebox{
+  font-size: 15px;
+}

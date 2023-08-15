@@ -1,8 +1,8 @@
 import RightHeader from '@/Components/RightHeader'
 import Headers from '../Components/Headers'
-import './globals.css'
 import { Inter } from 'next/font/google'
 import TopMiddleHeader from '@/Components/TopMiddleHeader'
+import '../../src/app/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

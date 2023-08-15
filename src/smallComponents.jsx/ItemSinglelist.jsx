@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ItemSinglelist = ({item}) => {
-  // console.log(item.image)
   return (
     <div className='itemsinglelist'>
         <div className="singleinner ">

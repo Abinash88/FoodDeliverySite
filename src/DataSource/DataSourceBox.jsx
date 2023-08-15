@@ -80,3 +80,25 @@ export const MealBox = [
         liked:false,
     }
 ]
+
+
+export const OrderMenuData = [
+    {
+        id:'34aewisdfhasdfwe',
+        image:'',
+        name:'Cheese Cake',
+        price:5.59,
+    },
+    {
+        id:'34aewisdfhasdfwe',
+        image:'',
+        name:'Cheese Cake',
+        price:5.59,
+    },
+    {
+        id:'34aewisdfhasdfwe',
+        image:'',
+        name:'Cheese Cake',
+        price:5.59,
+    }
+]
