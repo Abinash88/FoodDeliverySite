@@ -10,7 +10,6 @@ const CatagorySection = () => {
         <div className="CatagoryBox ">
             {
                 Catagory?.map((item) => {
-                    console.log(item);
                     return (
                         <>
                             <ItemSinglelist key={item.key} item={item}/>

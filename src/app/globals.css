@@ -24,9 +24,9 @@ nav ul li {
 nav ul li .mainlink{
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 14px;
@@ -208,4 +208,46 @@ nav ul li .mainlink{
 
 .pricebox{
   font-size: 15px;
+}
+
+
+
+.homepageoverflow::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+
+.homepageoverflow::-webkit-scrollbar-thumb{
+  background-color: rgb(156, 156, 156);
+  border-radius: 8px;
+}
+
+
+.Right_headers{
+  transition: .4s;
+}
+
+.Right_headers::-webkit-scrollbar{
+  width: 5px;
+}
+
+.Right_headers::-webkit-scrollbar-thumb{
+  background-color: rgb(156, 156, 156);
+  border-radius: 8px;
+}
+
+.innerContact{
+  position: relative;
+  overflow: hidden;
+}
+
+.innerContact::after{
+  content: '';
+  width: 100px;
+  height: 100px;
+  right: -35px;
+  bottom: -35px;
+  background-color: rgba(245, 245, 245, 0.5);
+  position: absolute;
+  border-radius: 50%;
 }

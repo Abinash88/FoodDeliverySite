@@ -6,7 +6,7 @@ import { MealBox } from '@/DataSource/DataSourceBox'
 
 const HomeBody = () => {
   return (
-    <div className='moretype mt-6'>
+    <div className=' mt-6'>
         <CatagorySection/>
         <GoMealSpecial GoMealBox={<GoMealBox MealBox={MealBox}/>}/>
     </div>

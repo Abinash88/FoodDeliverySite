@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useContext, useState } from "react";
 import {
   Bars3BottomLeftIcon,
   CakeIcon,
@@ -7,14 +9,14 @@ import {
 } from "@heroicons/react/24/solid";
 import { BellIcon as Bell } from "@heroicons/react/24/outline";
 import RightSidemore from "@/smallComponents.jsx/RightSidemore";
+import { Mycontext } from "@/app/layout";
 
 const RightHeader = () => {
+  const {getRightHeader} = useContext(Mycontext);
+
   return (
-    <div className="Right_headers xl:static absolute xl:w-[300px] py-10 px-3">
+    <div className={`Right_headers bg-white xl:h-auto h-[100vh] overflow-auto ${getRightHeader ? 'right-[0%]' : 'right-[-100%]'} xl:static fixed w-[300px] xl:right-0 py-10 px-3 z-20`}>
       <div className="w-[90%] mx-auto">
-        <div className="hamburgermenu xl:hidden block absolute right-[200px] top-2 cursor-pointer hover:bg-gray-200 rounded-md p-[1px]">
-          <Bars3BottomLeftIcon className="h-6 text-gray-500" />
-        </div>
 
         <div className="toprightMoreOptions ">
           <div className="top flex justify-between items-center">
