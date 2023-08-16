@@ -108,10 +108,11 @@ const Headers = () => {
           </nav>
         </div>
 
-        <div className="bottomContact pt-[90px] w-full h-full flex items-start justify-center">
-          <div className="innerContact w-[90%] h-[140px] bg-yellow-500 rounded-xl p-5">
-                  <h6 className="font-semibold leading-normal text-[13px] text-white">Contact us for any queries or for any special reservation</h6>
-                  <button className="px-3 py-1 bg-white rounded-md mt-6  text-[12px] font-semibold">Contact</button>
+        <div className="bottomContact pt-[90px] hidden sm:flex w-full h-full  items-start justify-center">
+          <div className="innerContact w-[90%] sm:h-[140px] bg-yellow-500 rounded-xl  sm:p-5">
+                  <h6 className="font-semibold sm:block hidden leading-normal text-[13px] text-white">Contact us for any queries or for any special reservation</h6>
+
+                  <button className="px-3 py-1 sm:bg-white rounded-md mt-6  text-[12px] font-semibold">Contact</button>
           </div>
         </div>
       </div>

@@ -25,8 +25,6 @@ const RightSidemore = () => {
             <button className='buttonborder'>Add Note</button>
           </div>
         </div>
-
-
         <OrderMenu/>
     </div>
   )
