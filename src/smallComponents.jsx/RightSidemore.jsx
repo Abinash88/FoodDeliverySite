@@ -14,15 +14,15 @@ const RightSidemore = () => {
                 </div>
             </div>
             <div className="change">
-              <button style={{border:'1px solid #f8b602'}} className='text-[12px] px-2 border-2 border-yellow-500 font-semibold text-yellow-500 rounded-md'>change</button>
+              <button style={{border:'1px solid #f8b602'}} className='text-[12px] px-2 border-2 border-yellow-500 font-semibold text-yellow-500 rounded-md hover:bg-yellow-500 hover:text-white'>change</button>
             </div>
         </div>
 
         <div className="defaultaddress">
           <p className='text-[12px] mt-5 text-gray-500'>Your default address for delivery</p>
           <div className="buttons space-x-3">
-            <button className='buttonborder'>Add Details</button>
-            <button className='buttonborder'>Add Note</button>
+            <button className='buttonborder hover:border-yellow-500 hover:text-yellow-500'>Add Details</button>
+            <button className='buttonborder hover:border-yellow-500 hover:text-yellow-500'>Add Note</button>
           </div>
         </div>
         <OrderMenu/>
