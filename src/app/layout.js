@@ -6,6 +6,7 @@ import TopMiddleHeader from '@/Components/TopMiddleHeader'
 import '../../src/app/globals.css'
 import { createContext, useEffect, useState } from 'react'
 import { Provider } from 'react-redux'
+import axios from 'axios'
 
 const Mycontext = createContext();
 
@@ -77,15 +78,51 @@ export default function RootLayout({ children }) {
   // item added system code end here 
 
 
+  // fetching the api from the rapid api start here 
+  const [MealBox, setMealBox] = useState([]);
+
+  const FetchProduct = async () => {
+    const options = {
+      method: "GET",
+      url: "https://the-mexican-food-db.p.rapidapi.com/",
+      headers: {
+        "X-RapidAPI-Key": "9395885f24mshc736bf092fe659cp161156jsn55ef50ba8f8a",
+        "X-RapidAPI-Host": "the-mexican-food-db.p.rapidapi.com",
+      },
+    };
+
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      setMealBox(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    FetchProduct();
+  }, []);
+  // fetching the api from the rapid api start here 
+
+
   // dark mode function start here 
   const CreateDarkmode = () => {
     setToggleDarkMode(!ToggleDarkMode)
   }
   // dark mode function end here 
 
+
+  // catagory section api fetchig start here 
+  const CreateCatagory = async () => {
+  }
+
+  useEffect(() => {
+    // CreateCatagory()
+  }, []);
   return (
     <html lang="en">
-      <Mycontext.Provider value={{ getRightHeader, CheckRightHeader, CreateDarkmode, ToggleDarkMode, BookmarkProduct, foodBookmark, AddedToOrderMenu, DeleteOrderMenu, OrderMenu }}>
+      <Mycontext.Provider value={{ getRightHeader, CheckRightHeader, CreateDarkmode, ToggleDarkMode, BookmarkProduct, foodBookmark, AddedToOrderMenu, DeleteOrderMenu, OrderMenu, MealBox }}>
         <body className={`flex slider transition duration-300 h-[100vh] w-full overflow`}>
           <div>
             <Headers />

@@ -2,10 +2,11 @@ import React from "react";
 import GoMailSingleItem from "./GoMailSingleItem";
 
 const GoMealBox = ({ MealBox }) => {
+  console.log(MealBox)
   return (
     <div className="gomailboxContainer">
       <div className="GomealBox">
-        {MealBox?.slice(0, 3).map((item) => {
+        {MealBox?.slice(2, 5).map((item) => {
           return (
             <>
               <div className="singlegomeal">

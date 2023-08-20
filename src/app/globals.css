@@ -254,7 +254,32 @@ nav ul li .mainlink{
 
 }
 
+.discountvoucher{
+  position: relative;
+}
 
+.discountvoucher::after{
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ffffff36;
+  top: -20px;
+  right: -80px;
+}
+
+.discountvoucher::before{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f8b602;
+  top: 3px;
+  z-index: 1;
+  right: -60px;
+}
 
 /* sliding transition styles of darkmode  */
 

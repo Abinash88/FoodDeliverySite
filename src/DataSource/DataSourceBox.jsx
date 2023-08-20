@@ -40,39 +40,34 @@ export const Catagory = [
 
 export const MealBox = [
   {
-    id: "34aewisdfhasdfwe",
+    id: 1,
     image: "",
     discount: null,
-    name: "Cheese Cake",
-    price: 5.59,
+    title: "Cheese Cake",
   },
   {
-    id: "f483fasdkfasd",
+    id: 2,
     image: "",
     discount: "15%",
-    name: "Chicken fry",
-    price: 6.59,
+    title: "Chicken fry",
   },
   {
-    id: "asoeufu34ifas",
+    id: 3,
     image: "",
     discount: "15%",
-    name: "Chicken Pizza",
-    price: 3,
+    title: "Chicken Pizza",
   },
   {
-    id: "oaiwuer984fnasd",
+    id: 4,
     image: "",
     discount: "15%",
-    name: "Chicken momo",
-    price: 7,
+    title: "Chicken momo",
   },
   {
-    id: "aoisdfjoiwef",
+    id: 5,
     image: "",
     discount: "15%",
-    name: "Veg pizza",
-    price: 8,
+    title: "Veg pizza",
   },
 ];
 

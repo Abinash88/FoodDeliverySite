@@ -12,9 +12,9 @@ const GoMailSingleItem = ({item}) => {
   return (
     <div className={`${ToggleDarkMode?'bg-gray-900':'bg-white'} gomailSingleList relative`}>
       
-         { item?.discount ? 
+         { true ? 
           <div style={{backgroundColor:'#eb5757'}} className="absolute w-[80px] rounded-r-md text-[14px] pl-6 text-white h-[20px] top-5 left-0">
-            {item?.discount ? `${item.discount} off` : ''}
+            {true ? `15% off` : ''}
           </div>:null
           }
 
@@ -34,8 +34,8 @@ const GoMailSingleItem = ({item}) => {
 
         <div className="bottombox flex justify-between items-center">
             <div className="namebox ">
-                <h6 className={`${ToggleDarkMode?'text-gray-100':'text-gray-600'} font-semibold text-[12px]`}>{item?.name}...</h6>
-                <h6 className={`${ToggleDarkMode?'text-gray-100':'text-gray-600'} font-semibold text-[13px]`}><span className='text-yellow-500 '>$</span> {item.price}</h6>
+                <h6 className={`${ToggleDarkMode?'text-gray-100':'text-gray-600'} font-semibold text-[12px]`}>{item?.title.substring(0, 20)}...</h6>
+                <h6 className={`${ToggleDarkMode?'text-gray-100':'text-gray-600'} font-semibold text-[13px]`}><span className='text-yellow-500 '>$</span> {item.id}</h6>
             </div>
             <div className="addbutton flex justify-center items-center">
               <button onClick={() => AddedToOrderMenu(item.id)} className='bg-yellow-500 text-white hover:bg-yellow-600 px-3 py-2 rounded-md'>+</button>

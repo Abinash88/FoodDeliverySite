@@ -17,7 +17,7 @@ const TotalcheckoutOrder = ({totalPrice}) => {
         <div style={{marginTop:'10px'}} className="flex justify-between items-center ">
           <h6 className="text-[14px] font-semibold">Total</h6>
           <h5 className="font-semibold ">
-            +<span className="text-yellow-500">$</span>{totalPrice? totalPrice + 1: 0}
+            +<span className="text-yellow-500">$</span>{totalPrice? parseFloat(totalPrice) + 1: 0}
           </h5>{" "}
         </div>
 
