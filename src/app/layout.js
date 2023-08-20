@@ -94,7 +94,9 @@ export default function RootLayout({ children }) {
     try {
       const response = await axios.request(options);
       console.log(response.data);
-      setMealBox(response.data);
+      sessionStorage.setItem('mainProduct', JSON.stringify(response.data));
+      const product = JSON.parse(sessionStorage.getItem('mainProduct'));
+      setMealBox(product);
     } catch (error) {
       console.error(error);
     }
@@ -128,7 +130,10 @@ const options = {
 
 try {
 	const response = await axios.request(options);
-  setCatagoryApi(response.data);
+  const apis = response.data;
+  sessionStorage.setItem('CatagoryData', JSON.stringify(apis));
+  const catagorydata = JSON.parse(sessionStorage.getItem('CatagoryData'))
+  setCatagoryApi(catagorydata);
 } catch (error) {
 	console.error(error);
 }

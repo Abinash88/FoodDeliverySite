@@ -10,8 +10,8 @@ const SingleOrderMenu = ({item}) => {
 
   return (
     <div className=' flex justify-between ordermenu items-center '>
-        <div className="ordermenuimage bg-gray-200">
-            <img src={item.image} alt="" />
+        <div className="ordermenuimage rounded-md overflow-hidden bg-gray-200">
+            <img src={item.image} alt=""  />
         </div>
         <div className={`text-[13px] flex flex-col space-y-1 items-start justify-center ${ToggleDarkMode? 'text-gray-200':'text-gray-500'}`}>
             <h5>{item?.title.substring(0, 10)}...</h5>

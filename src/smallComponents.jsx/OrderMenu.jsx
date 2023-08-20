@@ -27,7 +27,7 @@ const OrderMenu = () => {
         <h4 className={`${ToggleDarkMode?'text-white':'text-gray-700'} font-bold `}>Order Menu</h4>
 
         <div className="orderboxes">
-            <div className="innerorder mt-5 space-y-4">
+            <div className="innerorder mt-5">
                 {
                     filterProduct?.map((item) => {
                         return (<>
