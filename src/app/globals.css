@@ -165,23 +165,13 @@ nav ul li .mainlink{
 .buttons{
   margin-top: 10px;
 }
-/* 
-.buttonborder{
-  border: 1px solid gray;
-  color: gray;
-  font-size: 12px;
-  padding:4px 10px;
-  border-radius: 9px;
-  font-weight: 600;
-} */
 
 
-gomailSingleList
+
 /* order menu box style start  */
 .ordermenuimage{
   width: 60px ;
   height: 60px ;
-  background-color: whitesmoke;
   border-radius: 10px;
   margin-bottom: 10px;
 }

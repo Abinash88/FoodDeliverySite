@@ -18,7 +18,7 @@ const Headers = () => {
   const {  ToggleDarkMode } = useContext(Mycontext);
 
   return (
-    <div className={`${ToggleDarkMode?'bg-gray-600':'bg-white'} w-[80px] sm:w-[230px] h-full flex items-center justify-center`}>
+    <div className={`${ToggleDarkMode?'bg-gray-600':'bg-white'} w-[80px] slider sm:w-[230px] h-full flex items-center justify-center`}>
       <div className="innerheader w-[90%] mx-auto h-[90%] flex flex-col items-center">
         <div className="logo_container">
           <h2 className={`${ToggleDarkMode?'text-gray-100':'text-gray-900'} md:text-[24px] text-center text-[20px] sm:leading-normal leading-tight font-bold`}>

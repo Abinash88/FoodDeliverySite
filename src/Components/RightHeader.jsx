@@ -16,7 +16,7 @@ const RightHeader = () => {
   
   return (
     <div
-      className={`Right_headers ${ToggleDarkMode ? 'bg-gray-600' :'bg-white'} xl:h-[100vh h-[100vh]  overflow-y-auto ${
+      className={`Right_headers  ${ToggleDarkMode ?  'bg-gray-600' :'bg-white'} xl:h-[100vh h-[100vh]  overflow-y-auto ${
         getRightHeader ? "right-[0%]" : "right-[-100%]"
       } xl:static fixed w-[300px] xl:right-0 py-10 px-3 z-20`}
     >

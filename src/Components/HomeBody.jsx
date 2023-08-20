@@ -30,9 +30,9 @@ const HomeBody = () => {
     }
   };
 
-  useEffect(() => {
-    FetchProduct();
-  }, []);
+  // useEffect(() => {
+  //   FetchProduct();
+  // }, []);
 
   return (
     <div className=" mt-6">

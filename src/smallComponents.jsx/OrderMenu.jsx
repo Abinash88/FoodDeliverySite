@@ -1,12 +1,24 @@
-import React, { useContext } from 'react'
-import { OrderMenuData } from '@/DataSource/DataSourceBox'
+'use client'
+
+import React, { useContext, useEffect, useMemo, useState } from 'react'
 import SingleOrderMenu from './SingleOrderMenu'
 import TotalcheckoutOrder from './TotalcheckoutOrder'
 import { Mycontext } from '@/app/layout'
+import { MealBox } from '@/DataSource/DataSourceBox'
 
 const OrderMenu = () => {
 
-  const {  ToggleDarkMode } = useContext(Mycontext);
+  const {  ToggleDarkMode, DeleteOrderMenu, AddedToOrderMenu,OrderMenu } = useContext(Mycontext);
+  const [filterProduct, setFilterProduct] = useState([]);
+  const [totalPrice, setTotalPrice] = useState();
+    useEffect(() => {
+        if(typeof(Storage) !== 'undefined'){
+            const items = MealBox.filter((item) => OrderMenu?.includes(item.id));
+            const total = items.reduce((total, item) => total + item.price, 0);
+            setTotalPrice(total)
+            setFilterProduct(items);
+        }
+    },[AddedToOrderMenu,DeleteOrderMenu])
 
   return (
     <div className="orderfullmenu">
@@ -16,16 +28,16 @@ const OrderMenu = () => {
         <div className="orderboxes">
             <div className="innerorder mt-5">
                 {
-                    OrderMenuData?.map((item) => {
+                    filterProduct?.map((item) => {
                         return (<>
-                            <SingleOrderMenu item={item} key={item.id}/>
+                            <SingleOrderMenu item={item} key={item?.id}/>
                         </>)
                     })
                 }
             </div>
         </div>
     </div>
-    <TotalcheckoutOrder/>
+    <TotalcheckoutOrder totalPrice={totalPrice}/>
     </div>
 
   )

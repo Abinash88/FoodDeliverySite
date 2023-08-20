@@ -14,45 +14,83 @@ export default function RootLayout({ children }) {
 
   const [ToggleDarkMode, setToggleDarkMode] = useState(false);
   const [getRightHeader, setGetRightHeader] = useState(false);
-  const [foodBookmark, setFoodBookmark] = useState();
+  const [foodBookmark, setFoodBookmark] = useState([]);
+  const [OrderMenu, setOrderMenu] = useState([]);
 
   const CheckRightHeader = () => {
     setGetRightHeader(!getRightHeader)
   }
 
+  // Product bookmarks code start here 
+  useEffect(() => {
+    if (typeof (Storage) !== 'undefined') {
+      const bookmark = JSON.parse(localStorage.getItem(`bookmarkItem`));
+      setFoodBookmark(bookmark ? bookmark : []);
+    }
+  }, [])
 
+  useEffect(() => {
+    if (typeof (Storage) !== 'undefined') {
+      localStorage.setItem('bookmarkItem', JSON.stringify(foodBookmark));
+    }
+  }, [foodBookmark])
 
   const BookmarkProduct = (id) => {
+    if (!foodBookmark?.includes(id)) {
+      setFoodBookmark([...foodBookmark, id]);
+    } else {
+      setFoodBookmark(foodBookmark.filter((ids) => ids !== id));
+    }
+  }
+  // Product bookmarks code end here 
+
+  // item added system code start here 
+  useEffect(() => {
     if (typeof (Storage) !== 'undefined') {
-      const bookmark = localStorage.getItem(`bookmark${id}`);
-      if (!bookmark) {
-        localStorage.setItem(`bookmark${id}`, true)
+      const items = JSON.parse(localStorage.getItem('AddItems'))
+      setOrderMenu(items ? items : []);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof (Storage) !== 'undefined') {
+      localStorage.setItem('AddItems', JSON.stringify(OrderMenu));
+    }
+  }, [OrderMenu])
+
+  const AddedToOrderMenu = (id) => {
+    if (typeof (Storage) !== 'undefined') {
+      const items = JSON.parse(localStorage.getItem('AddItems'))
+      if (!items?.includes(id)) {
+        setOrderMenu([...OrderMenu, id])
       } else {
-        localStorage.setItem(`bookmark${id}`, !JSON.parse(bookmark))
+        setOrderMenu([...OrderMenu])
       }
     }
 
-    if (typeof Storage !== "undefined") {
-      const bookmark = localStorage.getItem(`bookmark${id}`);
-      setFoodBookmark(bookmark === true);
-    }
   }
 
-  console.log(foodBookmark);
+  const DeleteOrderMenu = (id) => {
+    console.log(id)
+    setOrderMenu(OrderMenu.filter((ids) => ids !== id))
+  }
+  // item added system code end here 
 
 
+  // dark mode function start here 
   const CreateDarkmode = () => {
     setToggleDarkMode(!ToggleDarkMode)
   }
+  // dark mode function end here 
 
   return (
     <html lang="en">
-      <Mycontext.Provider value={{ getRightHeader, CheckRightHeader, CreateDarkmode, ToggleDarkMode, BookmarkProduct, foodBookmark }}>
-        <body className={`flex h-[100vh] w-full overflow`}>
+      <Mycontext.Provider value={{ getRightHeader, CheckRightHeader, CreateDarkmode, ToggleDarkMode, BookmarkProduct, foodBookmark, AddedToOrderMenu, DeleteOrderMenu, OrderMenu }}>
+        <body className={`flex slider transition duration-300 h-[100vh] w-full overflow`}>
           <div>
             <Headers />
           </div>
-          <div className={`${ToggleDarkMode ? 'bg-gray-700' : 'bg-gray-100'} flex flex-col bg-gray-100  flex-1 justify-start items-center`}>
+          <div className={`${ToggleDarkMode ? 'bg-gray-700' : 'bg-gray-100'} slider flex flex-col bg-gray-100  flex-1 justify-start items-center`}>
             <TopMiddleHeader />
             {children}
           </div>
