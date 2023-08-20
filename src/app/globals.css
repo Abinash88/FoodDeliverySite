@@ -78,12 +78,6 @@ nav ul li .mainlink{
   row-gap: 20px;
 }
 
-.itemsinglelist{
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  border-radius: 10px;
-}
 
 .itemsinglelist .singleinner{
   padding: 20px;
@@ -107,7 +101,6 @@ nav ul li .mainlink{
     border-radius: 8px;
   }
   
-
   input:focus{
       outline: none;
       border: none;
@@ -141,8 +134,7 @@ nav ul li .mainlink{
   width: 230px;
   border-radius: 10px;
   margin-right: 10px;
-  height: 230px;
-  background-color: white;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,7 +165,7 @@ nav ul li .mainlink{
 .buttons{
   margin-top: 10px;
 }
-
+/* 
 .buttonborder{
   border: 1px solid gray;
   color: gray;
@@ -181,10 +173,10 @@ nav ul li .mainlink{
   padding:4px 10px;
   border-radius: 9px;
   font-weight: 600;
-}
+} */
 
 
-
+gomailSingleList
 /* order menu box style start  */
 .ordermenuimage{
   width: 60px ;
@@ -270,4 +262,12 @@ nav ul li .mainlink{
   border-radius: 50%;
 }
 
+}
+
+
+
+/* sliding transition styles of darkmode  */
+
+.slider{
+  transition: .3s;
 }

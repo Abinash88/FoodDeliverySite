@@ -1,12 +1,16 @@
 import { MapPinIcon } from '@heroicons/react/24/solid'
-import React from 'react'
+import React, { useContext } from 'react'
 import OrderMenu from './OrderMenu'
+import { Mycontext } from '@/app/layout';
 
 const RightSidemore = () => {
+
+  const {  ToggleDarkMode } = useContext(Mycontext);
+
   return (
-    <div className='w-full h-full mt-5 rightsidemore'>
+    <div className={`${ToggleDarkMode?'text-white':''} w-full h-full mt-5 rightsidemore`}>
         <div className="userdata flex items-center justify-between">
-            <div className="address">
+            <div className={` address`}>
                 <h4 className='font-semibold text-[17px]'>Your Address</h4>
                 <div className="flex items-center ">
                         <MapPinIcon className='h-5  text-yellow-500'/>
@@ -18,11 +22,11 @@ const RightSidemore = () => {
             </div>
         </div>
 
-        <div className="defaultaddress">
-          <p className='text-[12px] mt-5 text-gray-500'>Your default address for delivery</p>
+        <div className={`${ToggleDarkMode?'text-gray-200':'text-gray-500'} defaultaddress`}>
+          <p className='text-[12px] mt-5 '>Your default address for delivery</p>
           <div className="buttons space-x-3">
-            <button className='buttonborder hover:border-yellow-500 hover:text-yellow-500'>Add Details</button>
-            <button className='buttonborder hover:border-yellow-500 hover:text-yellow-500'>Add Note</button>
+            <button className={`${ToggleDarkMode?'text-white':'text-gray-500'}  text-[12px] border px-2 py-[2px] rounded-md hover:border-yellow-500 hover:text-yellow-500`}>Add Details</button>
+            <button className={`${ToggleDarkMode?'text-white':'text-gray-500'}  text-[12px] border px-2 py-[2px] rounded-md hover:border-yellow-500 hover:text-yellow-500`}>Add Note</button>
           </div>
         </div>
         <OrderMenu/>

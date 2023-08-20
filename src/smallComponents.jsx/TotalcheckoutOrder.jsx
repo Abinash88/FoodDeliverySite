@@ -21,7 +21,7 @@ const TotalcheckoutOrder = () => {
         <div className="coupancodeCheckout mt-6 flex flex-col space-y-5 justify-centent-center">
               <button className="flex items-center justify-between border border-yellow-500 p-2 rounded-lg bg-gray-100">
                 <CommandLineIcon className="h-7 text-white p-1 rounded-md bg-yellow-500"/>
-                <p className="text-[12px] font-semibold ">Have a coupon code</p>
+                <p className="text-[12px] text-gray-500 font-semibold ">Have a coupon code</p>
                 <ChevronRightIcon className="h-4 "/>
               </button>
               <button onClick={() => alert('Your checkout process is completed')} className=" text-center text-[14px] text-white bg-yellow-500 py-3 hover:bg-yellow-600 px-2 rounded-lg bg-gray-100">

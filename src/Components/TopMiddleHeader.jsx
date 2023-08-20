@@ -7,6 +7,8 @@ import { Mycontext } from '@/app/layout'
 
 const TopMiddleHeader = () => {
 
+  const {ToggleDarkMode}  = useContext(Mycontext);
+
   const {CheckRightHeader} = useContext(Mycontext);
     const [selectPart, setselectPart] = useState(false)
 
@@ -17,10 +19,9 @@ const TopMiddleHeader = () => {
     const SelectPickup = () => {
       setselectPart(true);
     }
-    console.log(selectPart)
   return (
          <div className='topMiddleHeader w-[90%] pb-5 flex justify-between items-center mx-auto mt-10'>
-          <h3 className='md:text-[19px] text-[16px] font-bold'>Hello, Samanatha</h3>
+          <h3 className={`${ToggleDarkMode?'text-gray-100':'text-gray-900'} md:text-[19px] text-[16px] font-bold`}>Hello, Samanatha</h3>
 
           <div className='deliveryPickupBtn sm:mr-0 mr-7 h-[40px] bg-gray-300 cursor-pointer relative lg:w-[150px] sm:w-[140px] w-[100px] flex rounded-lg bg-white'>
 

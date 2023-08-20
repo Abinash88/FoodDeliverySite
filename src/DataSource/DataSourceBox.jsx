@@ -1,10 +1,10 @@
-import Bakery from '../../public/bakery.png'
-import Burger from '../../public/burger.png'
-import Beverage from '../../public/beverage.png'
-import Chicken from '../../public/chicken.png'
-import Pizza from '../../public/pizza.png'
-import Seafood from '../../public/seafood.png'
-
+import Bakery from "../../public/bakery.png";
+import Burger from "../../public/burger.png";
+import Beverage from "../../public/beverage.png";
+import Chicken from "../../public/chicken.png";
+import Pizza from "../../public/pizza.png";
+import Seafood from "../../public/seafood.png";
+import { useEffect } from "react";
 
 export const Catagory = [
     {
@@ -37,68 +37,63 @@ export const Catagory = [
         image:Seafood,
         name:'SeaFood',
     },
-] 
+]
 
 export const MealBox = [
-    {
-        id:'34aewisdfhasdfwe',
-        image:'',
-        discount:null,
-        name:'Cheese Cake',
-        price:5.59,
-        liked:true,
-    },
-    {
-        id:'34aewisdfhasdfwe',
-        image:'',
-        discount:'15%',
-        name:'Cheese Cake',
-        price:5.59,
-        liked:false,
-    },
-    {
-        id:'34aewisdfhasdfwe',
-        image:'',
-        discount:'15%',
-        name:'Cheese Cake',
-        price:5.59,
-        liked:true,
-    }, {
-        id:'34aewisdfhasdfwe',
-        image:'',
-        discount:'15%',
-        name:'Cheese Cake',
-        price:5.59,
-        liked:false,
-    }
-    , {
-        id:'34aewisdfhasdfwe',
-        image:'',
-        discount:'15%',
-        name:'Cheese Cake',
-        price:5.59,
-        liked:false,
-    }
-]
-
+  {
+    id: "34aewisdfhasdfwe",
+    image: "",
+    discount: null,
+    name: "Cheese Cake",
+    price: 5.59,
+  },
+  {
+    id: "f483fasdkfasd",
+    image: "",
+    discount: "15%",
+    name: "Cheese Cake",
+    price: 5.59,
+  },
+  {
+    id: "asoeufu34ifas",
+    image: "",
+    discount: "15%",
+    name: "Cheese Cake",
+    price: 5.59,
+  },
+  {
+    id: "oaiwuer984fnasd",
+    image: "",
+    discount: "15%",
+    name: "Cheese Cake",
+    price: 5.59,
+  },
+  {
+    id: "aoisdfjoiwef",
+    image: "",
+    discount: "15%",
+    name: "Cheese Cake",
+    price: 5.59,
+  },
+];
 
 export const OrderMenuData = [
-    {
-        id:'34aewisdfhasdfwe',
-        image:'',
-        name:'Cheese Cake',
-        price:5.59,
-    },
-    {
-        id:'34aewisdfhasdfwe',
-        image:'',
-        name:'Cheese Cake',
-        price:5.59,
-    },
-    {
-        id:'34aewisdfhasdfwe',
-        image:'',
-        name:'Cheese Cake',
-        price:5.59,
-    }
-]
+  {
+    id: "34aewisdfhasdfwe",
+    image: "",
+    name: "Cheese Cake",
+    price: 5.59,
+  },
+  {
+    id: "34aewisdfhasdfwe",
+    image: "",
+    name: "Cheese Cake",
+    price: 5.59,
+  },
+  {
+    id: "34aewisdfhasdfwe",
+    image: "",
+    name: "Cheese Cake",
+    price: 5.59,
+  },
+];

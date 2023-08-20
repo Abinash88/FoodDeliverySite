@@ -1,12 +1,15 @@
+import { Mycontext } from "@/app/layout";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 
 const TopNameHeader = ({names, viewall}) => {
+  const {ToggleDarkMode}  = useContext(Mycontext);
+
   return (
     <>
       <div className="topname flex  justify-between">
-        <h3 className="font-semibold text-[15px] ">{names}</h3>
+        <h3 className={`${ToggleDarkMode?'text-gray-100':'text-gray-700'} font-semibold text-[15px] `}>{names}</h3>
         <Link className="flex items-center" href={"/"}>
           {" "}
           <span

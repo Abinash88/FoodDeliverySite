@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import {
   FaBeer,
   FaBicycle,
@@ -11,15 +11,17 @@ import {
 } from "react-icons/fa";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
+import { Mycontext } from "@/app/layout";
 
 const Headers = () => {
   const router = usePathname();
+  const {  ToggleDarkMode } = useContext(Mycontext);
 
   return (
-    <div className="mainHeader w-[80px] sm:w-[230px] h-full flex items-center justify-center">
+    <div className={`${ToggleDarkMode?'bg-gray-600':'bg-white'} w-[80px] sm:w-[230px] h-full flex items-center justify-center`}>
       <div className="innerheader w-[90%] mx-auto h-[90%] flex flex-col items-center">
         <div className="logo_container">
-          <h2 className="md:text-[24px] text-center text-[20px] sm:leading-normal leading-tight font-bold">
+          <h2 className={`${ToggleDarkMode?'text-gray-100':'text-gray-900'} md:text-[24px] text-center text-[20px] sm:leading-normal leading-tight font-bold`}>
             Go<br className="sm:hidden block"/>Meal<span className="text-yellow-500">.</span>{" "}
           </h2>
         </div>
@@ -32,7 +34,7 @@ const Headers = () => {
                     router === "/"
                       ? "bg-yellow-500 hover:bg-yellow-600 text-white"
                       : "text-gray-600 hover:bg-gray-100"
-                  }  mainlink`}
+                  }   ${ToggleDarkMode?'text-white hover:text-gray-600':'text-gray-600'} mainlink`}
                   href="/"
                 >
                   <FaDashcube className="linkicon" />{" "}
@@ -45,7 +47,7 @@ const Headers = () => {
                     router === "/FoodOrder"
                       ? "bg-yellow-500 hover:bg-yellow-600 text-white"
                       : "text-gray-600 hover:bg-gray-100"
-                  } px-3 mainlink`}
+                  } px-3 ${ToggleDarkMode?'text-white hover:text-gray-600':'text-gray-600'} mainlink`}
                   href="/FoodOrder"
                 >
                   <FaBicycle className="linkicon" />{" "}
@@ -58,7 +60,7 @@ const Headers = () => {
                     router === "/Favorite"
                       ? "bg-yellow-500 hover:bg-yellow-600 text-white"
                       : "text-gray-600 hover:bg-gray-100"
-                  } px-3 mainlink`}
+                  } px-3 ${ToggleDarkMode?'text-white hover:text-gray-600':'text-gray-600'} mainlink`}
                   href="/Favorite"
                 >
                   <FaLocationArrow className="linkicon" />{" "}
@@ -71,7 +73,7 @@ const Headers = () => {
                     router === "/OrderHistory"
                       ? "bg-yellow-500 hover:bg-yellow-600 text-white"
                       : "text-gray-600 hover:bg-gray-100"
-                  } px-3 mainlink`}
+                  } px-3 ${ToggleDarkMode?'text-white hover:text-gray-600':'text-gray-600'} mainlink`}
                   href="/OrderHistory"
                 >
                   <FaHistory className="linkicon" />{" "}
@@ -84,7 +86,7 @@ const Headers = () => {
                     router === "/Bills"
                       ? "bg-yellow-500 hover:bg-yellow-600 text-white"
                       : "text-gray-600 hover:bg-gray-100"
-                  } px-3 mainlink`}
+                  } px-3 ${ToggleDarkMode?'text-white hover:text-gray-600':'text-gray-600'} mainlink`}
                   href="/Bills"
                 >
                   <FaPaperclip className="linkicon" />{" "}
@@ -97,7 +99,7 @@ const Headers = () => {
                     router === "/Settings"
                       ? "bg-yellow-500 hover:bg-yellow-600 text-white"
                       : "text-gray-600 hover:bg-gray-100"
-                  } px-3 mainlink`}
+                  } px-3 ${ToggleDarkMode?'text-white hover:text-gray-600':'text-gray-600'} mainlink`}
                   href="/Settings"
                 >
                   <FaLocationArrow className="linkicon" />{" "}
@@ -108,7 +110,7 @@ const Headers = () => {
           </nav>
         </div>
 
-        <div className="bottomContact pt-[90px] hidden sm:flex w-full h-full  items-start justify-center">
+        <div className="bottomContact pt-[20px] hidden sm:flex w-full h-full  items-start justify-center">
           <div className="innerContact w-[90%] sm:h-[140px] bg-yellow-500 rounded-xl  sm:p-5">
                   <h6 className="font-semibold sm:block hidden leading-normal text-[13px] text-white">Contact us for any queries or for any special reservation</h6>
 

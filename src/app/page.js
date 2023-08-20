@@ -9,7 +9,7 @@ export default function Home() {
 
  
   return (
-    <main className="flex-1 homepageoverflow w-full h-full overflow-auto ">
+    <main className="flex-1 homepageoverflow pb-5 w-full h-full overflow-auto ">
       <div className='w-[90%] mx-auto '>
         <DiscountVoucher />
         <HomeBody />
