@@ -1,22 +1,22 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Catagory } from '@/DataSource/DataSourceBox'
 import ItemSinglelist from "./ItemSinglelist";
 import TopNameHeader from "./TopNameHeader";
 import axios from "axios";
+import { Mycontext } from "@/app/layout";
 
 const CatagorySection = () => {
-//   const [Catagory, setCatagory] = useState([]);
-
+  const {CatagoryApi} = useContext(Mycontext)
   return (
     <div className="">
       <TopNameHeader names={"Catagory"} />
       <div className="CatagoryBox ">
-        {Catagory?.map((item) => {
+        {CatagoryApi?.slice(1,7).map((item) => {
           return (
             <>
-              <ItemSinglelist key={item.key} item={item} />
+              <ItemSinglelist key={item.id} item={item} />
             </>
           );
         })}

@@ -114,15 +114,32 @@ export default function RootLayout({ children }) {
 
 
   // catagory section api fetchig start here 
+  const [CatagoryApi, setCatagoryApi] = useState([])
   const CreateCatagory = async () => {
+    
+const options = {
+  method: 'GET',
+  url: 'https://the-mexican-food-db.p.rapidapi.com/',
+  headers: {
+    'X-RapidAPI-Key': '9395885f24mshc736bf092fe659cp161156jsn55ef50ba8f8a',
+    'X-RapidAPI-Host': 'the-mexican-food-db.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+  setCatagoryApi(response.data);
+} catch (error) {
+	console.error(error);
+}
   }
 
   useEffect(() => {
-    // CreateCatagory()
+    CreateCatagory()
   }, []);
   return (
     <html lang="en">
-      <Mycontext.Provider value={{ getRightHeader, CheckRightHeader, CreateDarkmode, ToggleDarkMode, BookmarkProduct, foodBookmark, AddedToOrderMenu, DeleteOrderMenu, OrderMenu, MealBox }}>
+      <Mycontext.Provider value={{ getRightHeader, CheckRightHeader, CreateDarkmode, ToggleDarkMode, BookmarkProduct, foodBookmark, AddedToOrderMenu, DeleteOrderMenu, OrderMenu, MealBox, CatagoryApi }}>
         <body className={`flex slider transition duration-300 h-[100vh] w-full overflow`}>
           <div>
             <Headers />
