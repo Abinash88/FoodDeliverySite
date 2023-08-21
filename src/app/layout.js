@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
     setGetRightHeader(!getRightHeader)
   }
 
+
   // Product bookmarks code start here 
   useEffect(() => {
     if (typeof (Storage) !== 'undefined') {

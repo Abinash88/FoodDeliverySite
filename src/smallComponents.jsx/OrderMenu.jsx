@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useMemo, useState } from 'react'
 import SingleOrderMenu from './SingleOrderMenu'
 import TotalcheckoutOrder from './TotalcheckoutOrder'
 import { Mycontext } from '@/app/layout'
-import { MealBox } from '@/DataSource/DataSourceBox'
+// import { MealBox } from '@/DataSource/DataSourceBox'
 
 const OrderMenu = () => {
 
@@ -19,7 +19,6 @@ const OrderMenu = () => {
             setFilterProduct(items);
         }
     },[AddedToOrderMenu,DeleteOrderMenu])
-    console.log(filterProduct)
 
   return (
     <div className="orderfullmenu">

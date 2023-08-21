@@ -3,7 +3,6 @@ import React, { useContext } from 'react';
 
 const ItemSinglelist = ({item}) => {
   const {ToggleDarkMode} = useContext(Mycontext)
-  console.log(item)
   return (
     <div className={`cursor-pointer ${ToggleDarkMode?'bg-gray-600':'bg-white'} w-[100px] h-[100px] rounded-md`}>
         <div className=" py-[20px] flex flex-col items-center space-y-2"> 

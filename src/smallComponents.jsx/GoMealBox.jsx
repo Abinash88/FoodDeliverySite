@@ -2,7 +2,6 @@ import React from "react";
 import GoMailSingleItem from "./GoMailSingleItem";
 
 const GoMealBox = ({ MealBox }) => {
-  console.log(MealBox)
   return (
     <div className="gomailboxContainer">
       <div className="GomealBox">
